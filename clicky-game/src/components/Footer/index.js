@@ -1,2 +1,10 @@
 import React from "react";
-import "./style";
+import "./style.css";
+
+function Footer () {
+    return <div className="jumbotron text-center fixed-bottom">
+        <p className="pt-3">Monica Amitin 2020</p>
+    </div>
+}
+
+export default Footer;
