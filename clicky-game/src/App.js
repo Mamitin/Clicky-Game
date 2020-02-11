@@ -1,26 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from "./components/Header";
+import Wrapper from "./components/Wrapper";
+import Card from "./components/Card";
+import Footer from "./components/Footer";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+class App extends Component{
+  state ={
+    players,
+    score: 0,
+    topScore: 0,
+    newTopScore: 0
+  };
+
+
+
+restartGame = () => {
+  this.setState({ topScore: 0, score: 0, newTopScore: 0});
+  console.log(this.state.topScore)
+  players.sort((a,b) => 0.5 - Math.random());
+};
+
+
 
 export default App;
