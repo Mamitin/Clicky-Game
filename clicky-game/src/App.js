@@ -37,13 +37,37 @@ onClick = id => {
     }
     alert("Try again!");
 } else if (this.state.score < 12) {
-  clickedPlayer[0].click = true;
-    this.setState({ score: this.state.score + 1 });
-    players.sort((a,b) => 0.5 - Math.random());
+    clickedPlayer[0].click = true;
+      this.setState({ score: this.state.score + 1 });
+      players.sort((a,b) => 0.5 - Math.random());
 } else {
-  this.setState({ score: 0, topScore: 0, newTopScore: 0});
-  players.sort((a,b) => 0.5 - Math.random());
+      this.setState({ score: 0, topScore: 0, newTopScore: 0});
+      players.sort((a,b) => 0.5 - Math.random());
+    }
 }
+
+render () {
+  return ( <>
+    <header 
+      score={this.state.score}
+      topScore={this.state.topScore}
+      restartGame={this.restartGame}
+    />
+    <wrapper>
+      {this.state.players.map(player => (
+        <Card
+        onClick={this.onClick}
+        id={player.id}
+        key={player.id}
+        image={player.image}
+        click={player.click}
+        />
+      ))}
+    </wrapper>
+    <footer></footer>
+    </>
+    );
+  }
 }
 
 
