@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Lebron James",
+        "image": "../images/lebron.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Anthony Davis",
+        "image": "../images/davis.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Draymond Green",
+        "image": "../images/green.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Kevin Durant",
+        "image": "../images/kd.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Chris Paul",
+        "image": "../images/paul.jpg"
+    },
+    {
+        "id": 1,
+        "name": "Lebron James",
+        "image": "./images/lebron.jpg"
+    }
+]

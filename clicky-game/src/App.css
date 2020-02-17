@@ -1,3 +1,9 @@
 #main {
-  
+  background-image: url(./webb-dark.png);
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
 }

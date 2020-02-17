@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Wrapper from "./components/Wrapper";
 import Card from "./components/Card";
 import Footer from "./components/Footer";
+import players from "./players.json"
 
 class App extends Component{
   state ={
@@ -22,7 +23,7 @@ restartGame = () => {
 };
 
 onClick = id => {
-  const players = this.state.friends
+  const players = this.state.players
   const clickedPlayer = this.state.players.filter(player => player.id === id);
 
     if (clickedPlayer[0].click) {
@@ -48,12 +49,12 @@ onClick = id => {
 
 render () {
   return ( <>
-    <header 
+    <Header 
       score={this.state.score}
       topScore={this.state.topScore}
       restartGame={this.restartGame}
     />
-    <wrapper>
+    <Wrapper>
       {this.state.players.map(player => (
         <Card
         onClick={this.onClick}
@@ -63,8 +64,8 @@ render () {
         click={player.click}
         />
       ))}
-    </wrapper>
-    <footer></footer>
+    </Wrapper>
+    <Footer></Footer>
     </>
     );
   }
