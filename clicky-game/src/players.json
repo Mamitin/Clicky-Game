@@ -1,32 +1,50 @@
 [
     {
         "id": 1,
-        "name": "Lebron James",
-        "image": "../images/lebron.jpg"
+        "name": "Anthony Davis",
+        "image": "../images/davis.jpg",
+        "click": false
     },
     {
         "id": 2,
-        "name": "Anthony Davis",
-        "image": "../images/davis.jpg"
+        "name": "Draymond Green",
+        "image": "../images/green.jpg",
+        "click": false
     },
     {
         "id": 3,
-        "name": "Draymond Green",
-        "image": "../images/green.jpg"
+        "name": "Lebron James",
+        "image": "../images/lebron.jpg",
+        "click": false
     },
     {
         "id": 4,
-        "name": "Kevin Durant",
-        "image": "../images/kd.jpg"
+        "name": "Chris Paul",
+        "image": "../images/paul.jpg",
+        "click": false
     },
     {
         "id": 5,
-        "name": "Chris Paul",
-        "image": "../images/paul.jpg"
+        "name": "Giannis",
+        "image": "../images/giannis.jpg",
+        "click": false
     },
     {
-        "id": 1,
-        "name": "Lebron James",
-        "image": "./images/lebron.jpg"
+        "id": 6,
+        "name": "Michael Jordan",
+        "image": "../images/jordan.jpg",
+        "click": false
+    },
+    {
+        "id": 7,
+        "name": "Kevin Durant",
+        "image": "../images/kd.jpg",
+        "click": false
+    },
+    {
+        "id": 8,
+        "name": "Scottie",
+        "image": "../images/scottie.jpg",
+        "click": false
     }
 ]

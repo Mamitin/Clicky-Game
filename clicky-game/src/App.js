@@ -17,34 +17,37 @@ class App extends Component{
 
 
 restartGame = () => {
-  this.setState({ topScore: 0, score: 0, newTopScore: 0});
+  this.setState({ topScore: 0, score: 0, newTopScore: 0})
   console.log(this.state.topScore)
-  players.sort((a,b) => 0.5 - Math.random());
+  players.sort(() => Math.random() - 0.5);
 };
 
 onClick = id => {
   const players = this.state.players
   const clickedPlayer = this.state.players.filter(player => player.id === id);
-
+ 
     if (clickedPlayer[0].click) {
       players.sort((a,b) => 0.5 - Math.random());
-      this.setState({ topScore: this.state.score, score: 0, newTopScore: this.state.newTopScore });
-
-    if (this.state.score > this.state.topScore) {
-      this.setState({ newTopScore: this.state.topScore })
-    }
+      this.setState({ topScore: this.state.topScore, score: this.state.score += 0 });
+      
+      if (this.state.score > this.state.topScore) {
+        this.setState({ topScore: this.state.score })
+        
+      }
       for (var i = 0; i < players.length; i++) {
         players[i].click = false;
-    }
-    alert("Try again!");
-} else if (this.state.score < 12) {
+      }
+
+      alert("Sorry you hit the same card twice, try again!");
+
+  } else if (this.state.score < 10) {
     clickedPlayer[0].click = true;
-      this.setState({ score: this.state.score + 1 });
-      players.sort((a,b) => 0.5 - Math.random());
-} else {
-      this.setState({ score: 0, topScore: 0, newTopScore: 0});
-      players.sort((a,b) => 0.5 - Math.random());
-    }
+     this.setState({ score: this.state.score + 1 });
+    players.sort((a,b) =>  0.5 - Math.random());
+  } else {
+    this.setState({ score: 0, topScore: 0, newTopScore: 0});
+    players.sort((a,b) => 0.5 - Math.random());
+  }
 }
 
 render () {

@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 
 function Header(props) {
-    return <div className="jumbotron text-center">
+    return <div className="jumbotron text-center jumboSize">
         <div className="row">
             <div className="col-md-4">
                 <h1>Click Click Boom</h1>
